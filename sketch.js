@@ -8,15 +8,22 @@ console.log("colour", colour);
 
 let noiseMax = 5;
 let slider;
+let canvas;
 
 function setup() {
   colorMode(HSB);
-  createCanvas(windowWidth, windowHeight); 
+  canvas = createCanvas(windowWidth, windowHeight); 
+  canvas.position(0,0);
+  canvas.style("z-index", "-1");
   slider = createSlider(1, 40, 20, 0.1);
+  slider.style('width', '200px');
+  slider.position(width/2-100, height - 50);
+  pixelDensity(1);
 }
 
 function draw() {
   background(colour.value);
+  loadPixels();
   translate(width/2, height/2);
   stroke(255);
   noFill();
@@ -33,7 +40,7 @@ function draw() {
   }
   endShape(CLOSE);
   //noLoop;
-  
+  updatePixels();
 }
 
 function updateParams() {
