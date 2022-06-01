@@ -13,7 +13,7 @@ let slider;
 function setup() {
   canvas = createCanvas(windowWidth, windowHeight);
   canvas.position(0,0);
-  canvas.style("z-index", "-1");
+  canvas.style("z-index", "-2");
   slider = createSlider(1, 40, 20, 0.1);
   slider.style('width', '200px');
   slider.position(width/2-100, height - 50);
@@ -24,7 +24,7 @@ function draw() {
   background(temperature.value);
   loadPixels();
   translate(width/2, height/2);
-  stroke(0);
+  stroke(255);
   noFill();
   beginShape();
   noiseMax = slider.value();
