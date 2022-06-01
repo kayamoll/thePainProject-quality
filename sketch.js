@@ -4,15 +4,15 @@ let params = new URLSearchParams(url);
 
 // find the parameter for colour
 const temp = params.get("temp");
-console.log("temp", temperature);
+console.log("temp", temp);
 
 let noiseMax = 5;
 let canvas;
 let slider;
 
 function setup() {
-  colorMode(HSB);
   canvas = createCanvas(windowWidth, windowHeight); 
+  colorMode(HSB);
   canvas.position(0,0);
   canvas.style("z-index", "-1");
   slider = createSlider(1, 40, 20, 0.1);
