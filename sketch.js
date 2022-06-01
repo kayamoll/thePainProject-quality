@@ -3,8 +3,8 @@ const url = window.location.search;
 let params = new URLSearchParams(url);
 
 // find the parameter for colour
-const colour = params.get("colour");
-console.log("colour", colour);
+const colour = params.get("temp");
+console.log("temp", temperature);
 
 let noiseMax = 5;
 let slider;
@@ -22,7 +22,7 @@ function setup() {
 }
 
 function draw() {
-  background(colour.value);
+  background(temp.value);
   loadPixels();
   translate(width/2, height/2);
   stroke(0);
