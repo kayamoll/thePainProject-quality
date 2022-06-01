@@ -3,8 +3,8 @@ const url = window.location.search;
 let params = new URLSearchParams(url);
 
 // find the parameter for colour
-const temp = params.get("temp");
-console.log("temp", temp);
+const temperature = params.get("temperature");
+console.log("temperature", temperature);
 
 let noiseMax = 5;
 let canvas;
@@ -22,7 +22,7 @@ function setup() {
 }
 
 function draw() {
-  background(temp.value);
+  background(temperature.value);
   loadPixels();
   translate(width/2, height/2);
   stroke(0);
