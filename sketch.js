@@ -3,7 +3,7 @@ const url = window.location.search;
 let params = new URLSearchParams(url);
 
 // find the parameter for colour
-const colour = params.get("temp");
+const temp = params.get("temp");
 console.log("temp", temperature);
 
 let noiseMax = 5;
