@@ -11,8 +11,7 @@ let canvas;
 let slider;
 
 function setup() {
-  canvas = createCanvas(windowWidth, windowHeight); 
-  colorMode(HSB);
+  canvas = createCanvas(windowWidth, windowHeight);
   canvas.position(0,0);
   canvas.style("z-index", "-1");
   slider = createSlider(1, 40, 20, 0.1);
