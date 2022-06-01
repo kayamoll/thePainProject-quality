@@ -39,7 +39,7 @@ function draw() {
   }
   endShape(CLOSE);
   //noLoop;
-  updatePixels();
+ // updatePixels();
 }
 
 function updateParams() {
