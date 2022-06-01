@@ -7,8 +7,8 @@ const temp = params.get("temp");
 console.log("temp", temperature);
 
 let noiseMax = 5;
-let slider;
 let canvas;
+let slider;
 
 function setup() {
   colorMode(HSB);
