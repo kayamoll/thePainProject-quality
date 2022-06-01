@@ -24,7 +24,7 @@ function draw() {
   background(temperature.value);
   loadPixels();
   translate(width/2, height/2);
-  stroke(255);
+  stroke(0);
   noFill();
   beginShape();
   noiseMax = slider.value();
