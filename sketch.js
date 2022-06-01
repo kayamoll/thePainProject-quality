@@ -18,10 +18,15 @@ function setup() {
   slider.style('width', '200px');
   slider.position(width/2-100, height - 50);
   pixelDensity(1);
+  
+   // every time the slider is changed update the parameters in the link
+  slider.changed(updateParams);
+  // update it at the very start to make sure the url is correct if we dont slide the slider
+  updateParams();
 }
 
 function draw() {
-  background(255);
+  background(temperature.value);
   loadPixels();
   translate(width/2, height/2);
   stroke(0);
@@ -44,7 +49,7 @@ function draw() {
 
 function updateParams() {
   // get the link element (this is in the html)
-  let link = document.getElementById("https://kayamoll.github.io/thePainProject-temperature/");
+  let link = document.getElementById("link");
   // update the link with the slider value
-  link.href = "next.html?temperature=" + slider.value();
+  link.href = "index.html?colour=" + slider.value();
 }
