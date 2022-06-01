@@ -21,7 +21,7 @@ function setup() {
 }
 
 function draw() {
-  background(temperature.value);
+  background(255);
   loadPixels();
   translate(width/2, height/2);
   stroke(0);
